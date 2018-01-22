@@ -1,13 +1,14 @@
 package com.agent.experience.controller;
 
 import com.agent.experience.model.Experience;
+import com.agent.experience.model.Repository;
 import org.springframework.stereotype.Component;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import java.util.LinkedList;
 import java.util.List;
 
 @Component
@@ -17,16 +18,11 @@ public class Agent {
 
     @GET
     public List<Experience> listExperience() {
+        return new Repository().listExperience();
+    }
 
-        Experience ex1 = new Experience();
-        ex1.company_name = "guloggratis";
-        Experience ex2 = new Experience();
-        ex2.company_name = "softexpert";
-
-        List<Experience> list = new LinkedList<>();
-        list.add(ex1);
-        list.add(ex2);
-
-        return list;
+    @Path("{name}")
+    public Experience getExperience(@PathParam("name") String name) {
+        return new Repository().getExperience(name);
     }
 }

@@ -1,6 +1,5 @@
 package com.agent.experience.model;
 
-
 public class Experience {
 
     public String id;

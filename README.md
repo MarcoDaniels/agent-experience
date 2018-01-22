@@ -13,8 +13,9 @@ _agent-experience is the agent responsible for retrieving all work experience in
 agent-experience is part of [my little virtual friend](http://mylittlevirtualfriend.com) setup.
 
 ## todo
-- [ ] repository in model to get experience(s) with interfaces
-- [ ] agent controller using repository 
+- [x] repository in model to get experience(s) with interfaces
+- [x] agent controller using repository 
+- [ ] get experience by name?!
 - [ ] agent/help endpoint
 - [ ] agent/wakeup endpoint
 - [ ] setup authentication for post/put/delete endpoints
