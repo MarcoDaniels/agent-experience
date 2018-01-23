@@ -43,8 +43,11 @@ public class Repository implements IRepository {
 
     @Override
     public Experience getExperience(String name) {
-        // filter by name and get the correct one
-        return experiences.get(0);
-        //return ex;
+        for (Experience experience: experiences) {
+            if (experience.company_name.toLowerCase().contains(name.toLowerCase())) {
+                return experience;
+            }
+        }
+        return null;
     }
 }

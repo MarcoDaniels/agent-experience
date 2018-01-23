@@ -21,7 +21,8 @@ public class Agent {
         return new Repository().listExperience();
     }
 
-    @Path("{name}")
+    @GET
+    @Path("/{name}")
     public Experience getExperience(@PathParam("name") String name) {
         return new Repository().getExperience(name);
     }

@@ -6,7 +6,6 @@ _agent-experience is the agent responsible for retrieving all work experience in
 ```
 /agent/experience/,
 /agent/experience/{name},
-/agent/help
 /agent/wakeup,
 ```
 
@@ -15,9 +14,8 @@ agent-experience is part of [my little virtual friend](http://mylittlevirtualfri
 ## todo
 - [x] repository in model to get experience(s) with interfaces
 - [x] agent controller using repository 
-- [ ] get experience by name?!
-- [ ] agent/help endpoint
-- [ ] agent/wakeup endpoint
-- [ ] setup authentication for post/put/delete endpoints
+- [x] get experience by name?!
+- [x] agent/wakeup endpoint
 - [ ] post/put/delete endpoints
+- [ ] setup authentication for post/put/delete endpoints
 - [ ] setup a database instead of inMemory?
